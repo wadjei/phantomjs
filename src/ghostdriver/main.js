@@ -68,6 +68,7 @@ try {
     // Start the server
     if (server.listen(ghostdriver.config.port, { "keepAlive" : true }, router.handle)) {
         _log.info("Main", "running on port " + server.port);
+        _log.info("Main", "(build includes PATCH body support)");
 
         // If a Selenium Grid HUB was provided, register to it!
         if (ghostdriver.config.hub !== null) {
